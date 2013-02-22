@@ -161,35 +161,35 @@ var layerMeta = {
     // INKOMEN
     "inkomensklasse_0":
     {
-        "description": "Verdient minder dan 11.600 euro",
+        "description": "Verdient minder dan &euro;11.600",
         "category": "inkomen",
         "area_type": "stadsdeel"
     },
 
     "inkomensklasse_1":
     {
-        "description": "Verdient tussen de 11.600 en 18.500 euro",
+        "description": "Verdient &euro;11.600 - &euro;18.500",
         "category": "inkomen",
         "area_type": "stadsdeel"
     },
 
     "inkomensklasse_2":
     {
-        "description": "Verdient tussen de 18.500 en 27.900 euro",
+        "description": "Verdient &euro;18.500 - &euro;27.900",
         "category": "inkomen",
         "area_type": "stadsdeel"
     },
 
     "inkomensklasse_3":
     {
-        "description": "Verdient tussen de 27.900 en 39.700 euro",
+        "description": "Verdient &euro;27.900 - &euro;39.700",
         "category": "inkomen",
         "area_type": "stadsdeel"
     },
 
     "inkomensklasse_4":
     {
-        "description": "Verdient meer dan 39.700",
+        "description": "Verdient meer dan &euro;39.700",
         "category": "inkomen",
         "area_type": "stadsdeel"
     },
@@ -226,7 +226,7 @@ var layerCategories = {
 
     "criminaliteit": {
         "layers": ['straatr_zakkenr'],
-        "area_type": "sd",
+        "area_type": "old",
         "data_type": "percentage",
         "applies_to": "person"
     },

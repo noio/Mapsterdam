@@ -4,7 +4,6 @@ function showLayer(layerName) {
     myScript = Asset.javascript('json_data/layers/'+layerName+'.js',{
         onLoad:function(){
             var layerData = layers[layerName];
-            // TODO Clear layer first.
 			layerMarkers[layerName] = []
             for (var code in layerData){
                 value = layerData[code];
