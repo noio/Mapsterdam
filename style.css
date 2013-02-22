@@ -28,26 +28,30 @@ p img.right {float:right;margin:1.5em 0 1.5em 1.5em;}
 
 /* GENERAL STYLES */
 
-body             { background: #E1E5E3; }
-a                { text-decoration: none; color: #FF9100;}
+body             { background: #888888; }
+a                { text-decoration: none; color: #666666; font-weight: bold;}
 a:hover          { color: #00415B;}
 
 /* LAYOUT */
-#header             { height: 80px; position: absolute; top: 0; right: 0; left: 0;}
 
-#map-container      { position: absolute; left: 0; top: 80px; bottom: 0; right: 280px;}
+#map-container      { position: absolute; left: 0; top: 0; bottom: 0; right: 0;}
 #map-canvas         { width: 100%; height: 100%;}
-#sidebar            { width: 280px; height: 100%; position: fixed; right: 0; top: 0; overflow-y: scroll;}
+#sidebar            { width: 280px; max-height: 100%; position: fixed; right: 0; top: 0; overflow-y: scroll;}
 
 /* ELEMENTS */
 /* header */
-#header             { background: transparent;}
+#header             { height: 50px; position: absolute; top: 0; left: 0; width: 500px; z-index: 100;}
 /* Logo */
-#header h1          { width: 150px; height: 50px; margin: 10px; background: url('images/logo.png') repeat center top; float: left;}
+#header li			{  height: 50px; margin: 4px; padding: 5px; float: left;
+					   list-style: none; background: url('images/bg-white-80-percent.png');}
+#header li:hover	{ background: white; }
+#header h1          { width: 250px; height: 50px; background: url('images/logo.png') repeat center top; float: left;}
   #header h1 a      { width: 100%; height: 100%; display: block; text-indent: -9999px; }
 
+#about-button		{ display: block; width: 50px; height: 50px; background: url('images/icon-about.png'); text-indent: -9999px; }
+
 #welcome            { width: 100%; height: 100%; position: absolute; top: 0; left: 0; 
-                      background: url('images/bg-white-60-percent.png'); z-index: 200;}
+                      background: url('images/bg-white-80-percent.png'); z-index: 200;}
 #welcome h1         { width: 150px; height: 50px; margin: 0; padding: 10px; text-indent: -9999px; 
                       background: url('images/logo.png') #E2E4E3 no-repeat center; }
 #welcome .inner     { width: 800px; position: absolute; top: 200px; left: 50%; margin-left: -400px;} 
@@ -60,15 +64,13 @@ a:hover          { color: #00415B;}
                       border-top: 1px dashed #868988; border-bottom: 1px dashed #868988;}
 
 /* Menu */
-#menu               { position: absolute; left: 180px; right: 20px; top: 48px; height: 20px; border-top: 1px solid #FF9100; padding-top: 5px;}
-#menu li            { list-style:none; float: left; margin-left: 10px;}
 
 /* Feeds box */
 #feed               { overflow: auto; width: 100%;}
 #feed ul            { list-style:none;}
-#feed .item         { padding: 10px; list-style:none; background: white; cursor: pointer; margin: 4px;}
+#feed .item         { padding: 10px; list-style:none; background: url('images/bg-white-80-percent.png'); cursor: pointer; margin: 4px;}
 #feed .item em.keyword { font-weight: bold; text-decoration: underline;}
-#feed h5            { text-transform: uppercase; letter-spacing: -1px; margin-bottom: 0.5em; line-height: 16px; color: #FF9100;}
+#feed h5            { text-transform: uppercase; letter-spacing: -1px; margin-bottom: 0.5em; line-height: 16px; color: #313131;}
 #feed div.img       { float: left; overflow: hidden; width: 90px; max-height: 90px;margin-right: 10px;}
 #feed .item img     { width: 100%;}
 #feed .item .button { display: block; float: left;margin-right: 16px;}
@@ -77,16 +79,18 @@ a:hover          { color: #00415B;}
 #feed .item .buttons { border-top: 1px dashed #868988; text-transform: uppercase;}
 
 /* Legend */
-#legend             { position: absolute; left: 10px; top: 90px; z-index: 200; 
-                      width: 250px; background: white; border-top: 1px dashed #868988;}
-#legend h3          { height: 16px; border-bottom: 1px solid #121212; color: #FF9100; text-align: center; 
+#legend             { position: absolute; left: 4px; top: 70px; z-index: 200; 
+                      width: 250px; background: url('images/bg-white-80-percent.png'); }
+#legend h3          { height: 16px; border-bottom: 2px solid #989898; color: #323232; text-align: center; 
                       padding: 10px; font-size: 14px; text-transform: uppercase; margin-bottom: 0;}
 #legend #region     { font-weight: bold;}
 #legend input       { float: left; margin: 10px 10px 0 5px;}
-#legend h4          { background: #FF9100; text-transform: uppercase; font-size: 15px; 
-                      padding: 5px; color: white; margin-bottom: 0; border-bottom: 1px solid #121212;}
+#legend h4          { background: #323232; text-transform: uppercase; font-size: 15px; 
+                      padding: 5px; color: #707070; margin-bottom: 0; border-bottom: 2px solid #e5e5e5;}
+#legend li:last-child h4 { border-bottom: none }
 #legend li          { list-style: none; cursor: pointer; }
-#legend li li       { border-bottom: 1px solid #121212;}
+#legend li li       { border-bottom: 2px solid #989898;}
+#legend li li:last-child { border-bottom: none;}
 #legend span.descr  { font-size: 14px; color: #333; position: relative; top: 7px;}
 #legend .imbox      { width: 40px; height:50px; float: left; margin: 5px; overflow: hidden; text-align: center;}
 #legend .person-img { float: left; width: 40px; height: 50px; overflow: hidden;}
