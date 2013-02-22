@@ -37,11 +37,11 @@ a:hover          { color: #00415B;}
 
 #map-container      { position: absolute; left: 0; top: 80px; bottom: 0; right: 280px;}
 #map-canvas         { width: 100%; height: 100%;}
-#sidebar            { width: 280px; height: 100%; position: fixed; right: 0; top: 80px; overflow-y: scroll;}
+#sidebar            { width: 280px; height: 100%; position: fixed; right: 0; top: 0; overflow-y: scroll;}
 
 /* ELEMENTS */
 /* header */
-#header             { background: white;}
+#header             { background: transparent;}
 /* Logo */
 #header h1          { width: 150px; height: 50px; margin: 10px; background: url('images/logo.png') repeat center top; float: left;}
   #header h1 a      { width: 100%; height: 100%; display: block; text-indent: -9999px; }
@@ -77,7 +77,7 @@ a:hover          { color: #00415B;}
 #feed .item .buttons { border-top: 1px dashed #868988; text-transform: uppercase;}
 
 /* Legend */
-#legend             { position: absolute; left: 0px; top: 80px; z-index: 200; 
+#legend             { position: absolute; left: 10px; top: 90px; z-index: 200; 
                       width: 250px; background: white; border-top: 1px dashed #868988;}
 #legend h3          { height: 16px; border-bottom: 1px solid #121212; color: #FF9100; text-align: center; 
                       padding: 10px; font-size: 14px; text-transform: uppercase; margin-bottom: 0;}
