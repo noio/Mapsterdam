@@ -74,11 +74,11 @@
         e.preventDefault();
         $('welcome').hide();
     })
-    // $('about-button').addEvent('click',function(e){
-    //         e.preventDefault();
-    //         $('welcome').show()
-    //     })
-    $('zoomout-button').addEvent('click',function(e){
+    $('about-button').addEvent('click',function(e){
+            e.preventDefault();
+            $('welcome').show()
+        })
+    $$('#header h1').addEvent('click',function(e){
         e.preventDefault();
         window.core.zoomOut();
     })
@@ -89,10 +89,10 @@
 </script>
 </head>
 <body>
-    <div id="header"><h1><a href="/">Mapsterdam</a></h1>
-        <ul id='menu'>
-            <li><a id='about-button' href='about.html' target='_blank'>OVER DEZE APP</a></li>
-            <li><a id='zoomout-button' href='#'>ZOOM UIT</a></li>
+    <div id="header">
+        <ul>
+            <li><h1><a href="/">Mapsterdam</a></h1></li>
+            <li><a id='about-button' href='#' target='_blank'>OVER DEZE APP</a></li>
         </ul>
     </div>
     
