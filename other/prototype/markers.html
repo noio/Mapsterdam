@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Markers on street view</title>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+  google.load("feeds","1");
+  google.load("maps","3",{'other_params': "sensor=false"});
+  google.setOnLoadCallback(initialize)
+  
+  function initialize() {
+  
+    
+     var map;
+     var panorama;
+     var deDam = new google.maps.LatLng(52.372730285566895, 4.893229007720947);
+     var warmoes = new google.maps.LatLng(52.37313639562877, 4.8946452140808105);
+
+     var latLngOffset = 0.001;
+ 
+    // Set up the map
+    var mapOptions = {
+      center: deDam,
+      zoom: 18,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      streetViewControl: false
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+
+
+    var markerImage =
+        new google.maps.MarkerImage(
+            'http://chart.googleapis.com/chart?chst=d_simple_text_icon_left&chld=+|3|000|glyphish_tshirt|24|FF44aa|FFF');
+    markerImage.size = new google.maps.Size(48,28);        
+    markerImage.scaledSize = new google.maps.Size(48,28);
+    
+    for (var i = 0; i < 100; i ++){
+        p = new google.maps.LatLng(
+            deDam.lat() + Math.random()*2*latLngOffset - latLngOffset,
+            deDam.lng() + Math.random()*2*latLngOffset - latLngOffset
+        )
+        var marker = new google.maps.Marker({
+            position: p,
+            map: map,
+            icon: markerImage,
+            title: 'Marker'
+        });
+    }
+    
+    var markerImage =
+        new google.maps.MarkerImage(
+            'http://chart.googleapis.com/chart?chst=d_simple_text_icon_left&chld=+|3|000|glyphish_tshirt|24|33ddaa|FFF');
+        markerImage.size = new google.maps.Size(48,28);        
+        markerImage.scaledSize = new google.maps.Size(48,28);
+    
+    
+    for (var i = 0; i < 10; i ++){
+        p = new google.maps.LatLng(
+            warmoes.lat() + Math.random()*2*latLngOffset - latLngOffset,
+            warmoes.lng() + Math.random()*2*latLngOffset - latLngOffset
+        )
+        var marker = new google.maps.Marker({
+            position: p,
+            map: map,
+            icon: markerImage,
+            title: 'Marker'
+        });
+    }
+  
+
+    // We get the map's default panorama and set up some defaults.
+    // Note that we don't yet set it visible.
+    panorama = map.getStreetView();
+    panorama.setPosition(deDam);
+    panorama.setPov({
+      heading: 265,
+      zoom:1,
+      pitch:0}
+    );
+  }
+
+  function toggleStreetView() {
+    var toggle = panorama.getVisible();
+    if (toggle == false) {
+      panorama.setVisible(true);
+    } else {
+      panorama.setVisible(false);
+    }
+  }
+</script>
+</head>
+<body>
+  <div id="toggle">
+  <input type="button" value="Toggle Street View" onclick="toggleStreetView();"></input>
+  </div>
+  <div id="map-canvas" style="width: 900px; height: 500px"></div>
+</body>
+</html>

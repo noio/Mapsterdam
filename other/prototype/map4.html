@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Full screen Map View</title>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script src="js/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/geom.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/feeds.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mapstyle.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/map.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="json_data/maps/buurten2010.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/maps/stadsdelen2010.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/meta_data.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+<!-- Make the document body take up the full screen -->
+<style type="text/css">
+  v\:* {behavior:url(#default#VML);}
+  html, body {width: 100%; height: 100%}
+  body {margin: 0}
+</style>
+
+<script type="text/javascript">
+  // google.load("feeds", "1");
+  // google.load("mootools","1.3.1")  
+  google.load("maps","3",{'other_params': "sensor=false&libraries=geometry"});
+  google.setOnLoadCallback(initialize);
+  
+  var streetViewMarkers = [];
+  
+  function initialize() {
+    //var map;
+    var deDam = new google.maps.LatLng(52.372730285566895, 4.893229007720947);
+    var warmoes = new google.maps.LatLng(52.355, 4.90);
+    var nietDeDam = new google.maps.LatLng(52.350, 4.95);
+    var latLngOffset = 0.01;
+    
+    
+    // Set up the map
+    var mapOptions = {
+      center: deDam,
+      zoom: 13,
+      disableDefaultUI: true,
+      streetViewControl: true,
+      minZoom: 12
+    };
+    window.map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+
+    setMapStyle(zoomOutStyle);
+
+    // We get the map's default panorama and set up some defaults.
+    // Note that we don't yet set it visible.
+
+    window.panorama = window.map.getStreetView();
+    window.panorama.setPosition(deDam);
+    window.panorama.setPov({
+      heading: 265,
+      zoom:1,
+      pitch:0
+    });
+    window.panorama.setVisible(false);
+
+    // // Plot the Stadsdelen on the map
+    // for (var id in sd2010){
+    //     drawPolygons(sd2010[id]['borders']);
+    // }
+    
+    fetchAT5(function(item){
+        var p = new google.maps.LatLng(parseFloat(item.latitude),parseFloat(item.longitude));
+        var itemLi = new Element('li.item',{'html':item.title})
+        if (item.image != undefined){
+            var img = new Element('img',{'src':item.image})
+            itemLi.grab(img,'top');
+        }
+        $$('#feed ul')[0].grab(itemLi);
+        makeEventMarker(p, item.title);
+    });
+    
+  }
+  
+</script>
+</head>
+<body>
+  <div id="map-canvas"></div>
+  <div id="feed"><ul></ul></div>
+</body>
+</html>

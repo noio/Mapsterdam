@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Mapsterdam</title>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry"></script>
+
+<script src="js/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mootools-more-1.3.2.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/raphael.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/geom.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/feeds.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mapstyle.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/map.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/keywords.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/render.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/icons.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="json_data/maps/buurten2010.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/maps/stadsdelen2010.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/meta_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/maps/buurtcodes_old_to_new.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="json_data/layers/totale_bevolking.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/layers/turken.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/layers/autochtonen.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/layers/marokkanen.js" type="text/javascript" charset="utf-8"></script>
+<script src="json_data/layers/surinamers.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="json_data/layers/opleidingsniveau.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+<!-- Make the document body take up the full screen -->
+<style type="text/css">
+  v\:* {behavior:url(#default#VML);}
+  html, body {width: 100%; height: 100%}
+  body {margin: 0}
+</style>
+
+<script type="text/javascript">
+
+  google.setOnLoadCallback(initialize);
+  
+  function initialize() {
+    
+    window.core = new Core();
+    fetchAT5(addFeedItem);
+    
+    $('welcome').addEvent('click',function(e){
+      e.preventDefault();
+      $('welcome').destroy();
+    })
+    // DO SOME INTERFACE STUFF
+    // TODO: RESIZE UI IN JAVASCRIPT onResize EVENTS ETCETERA
+  }
+  
+</script>
+</head>
+<body>
+    <div id="header"><h1><a href="/">Mapsterdam</a></h1></div>
+    
+    <div id="map-container"><div id="map-canvas"></div></div>
+
+    <div id="sidebar">
+        <!-- <a href='#' class='feed-scroll up'>Nieuwst</a> -->
+        <div id="feed"><ul></ul></div>
+        <!-- <a href='#' class='feed-scroll down'>Ouder</a> -->
+    </div>
+    <div id="legend"><ul></ul>
+    </div>
+    
+    <div id="welcome"><div class='inner'><h3>Wat gebeurt er in jouw buurt?</h3>
+    <p><strong>Lees het nieuwsbericht:</strong> Kies een nieuwsbericht op de kaart of in de rechter kolom.<br/>
+<strong>Bekijk alles op de straat:</strong> Klik op &lsquo;Bekijk het op straat&rsquo; om alle informatie geprojecteerd te zien op straat.
+     </p>
+    <p class='disclaimer'>Deze app is een prototype en dus nog in ontwikkeling. Niet alle informatie die wij hebben van O&amp;S Amsterdam, is ge&iuml;mplementeerd. De data die nu in het prototype wordt gebruikt (cijfers over opleidingsniveau en de bevolkingssamenstelling), is puur ter illustratie van de app. We verwachten de resterende data in de komende dagen te implementeren. </p><p class='action'>Klik om te beginnen</p></div></div>
+</body>
+</html>

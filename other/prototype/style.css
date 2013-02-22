@@ -1,0 +1,71 @@
+/* RESET */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+html,body {height: 100%;}
+.clearfix:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+
+/* TYPOGRAPHY */
+html {font-size:100.01%;}
+body {font-size:87.5%;color:#222;background:#fff;font-family:"Helvetica Neue",Helvetica, Verdana, Arial, sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
+h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
+h2 {font-size:2em;margin-bottom:0.75em;}
+h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
+h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
+h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h6 {font-size:1em;font-weight:bold;}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+p {margin:0 0 1.5em;}
+p img.left {float:left;margin:1.5em 1.5em 1.5em 0;padding:0;}
+p img.right {float:right;margin:1.5em 0 1.5em 1.5em;}
+
+/* GENERAL STYLES */
+
+body                {background: #F2EFE9;}
+
+/* LAYOUT */
+#header             { height: 50px; position: absolute; top: 0;}
+#map-container      { position: absolute; left: 0; top: 50px; bottom: 0; right: 250px;}
+#map-canvas         { width: 100%; height: 100%;}
+#sidebar            { width: 250px; height: 100%; position: fixed; right: 0; top: 0; overflow-y: scroll;}
+#legend             { position: absolute; right: 250px; top: 0; z-index: 200; 
+                      width: 250px; background: white; padding: 5px;}
+
+/* ELEMENTS */
+/* Logo */
+#header h1              { width: 210px; height: 50px; background: url('images/logo.png') repeat center top;}
+  #header h1 a          { width: 100%; height: 100%; display: block; text-indent: -9999px; }
+
+#welcome            { width: 100%; height: 100%; position: absolute; top: 0; left: 0; 
+                      background: url('images/bg-black-80-percent.png'); z-index: 200;}
+#welcome .inner     { width: 500px; position: absolute; top: 200px; left: 50%; margin-left: -250px;
+                      padding: 20px; color: white;}  
+#welcome .disclaimer{ text-transform: uppercase; font-size: 10px; color: #ddd;}
+#welcome .action    { text-align: center; }
+#welcome h3         { color: white; }
+
+/* Feeds box */
+#feed               { overflow: auto; width: 100%;}
+#feed ul            { list-style:none;}
+#feed .item         { margin: 5px; padding: 10px; list-style:none; background: white;
+                      cursor: pointer;}
+#feed h5            { margin-bottom: 0.5em;}
+#feed div.img       { float: left; overflow: hidden; width: 90px; max-height: 90px;margin-right: 10px;}
+#feed .item img     { width: 100%;}
+#feed .item .button { display: block; float: left;}
+
+
+/* Legend */
+
+#legend h4          { background: #bbb; text-transform: capitalize; padding: 5px; color: white; margin-bottom: 0;}
+#legend li          { list-style: none;}
+#legend li li       { border-bottom: 1px solid #bbb; font-size: 12px;}
+#legend .imbox      { width: 40px; height:50px; float: left; margin: 5px; overflow: hidden;}
+
