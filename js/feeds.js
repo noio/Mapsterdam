@@ -72,6 +72,9 @@ var FeedItem = new Class({
         this.element.getElement('.details').slide('show');
         this.element.getElements('div.img').setStyles({'width':'235px','max-height':'250px'});
         this.marker.setAnimation(google.maps.Animation.BOUNCE);
+        if (window.core.zoomLevel == ZOOM_LEVEL_OUT) {
+            window.core.zoomSD(this.region);
+        }
     },
     closeDetails: function(){
         this.element.getElement('.details').slide('hide');
