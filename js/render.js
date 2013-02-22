@@ -376,9 +376,10 @@ var Core = new Class({
                 var num = $$('#legend #layer-'+layerName+' .num');
                 var str = layers[layerName][this.roi]
                 if (str == null) {
-                    str = '0';
+                    str = 0;
                 }
                 if (layerCategories[catName].data_type == 'percentage'){
+                    str=Math.round(str);
                     str+='%';
                 } else {
                     str+=" A'dammers";
