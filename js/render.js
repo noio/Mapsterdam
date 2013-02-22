@@ -19,7 +19,7 @@ var Core = new Class({
           'disableDoubleClickZoom': true, 'draggable': false, 'scrollwheel': false
         };
         window.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        setMapStyle(meminStyle);
+        setMapStyle(zoomOutStyle);
         // We get the map's default panorama and set up some defaults.
         // Note that we don't yet set it visible.
         window.panorama = window.map.getStreetView();
