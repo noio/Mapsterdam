@@ -27,8 +27,8 @@ var Core = new Class({
         window.panorama.setVisible(false);
         window.panorama.setOptions({
             'addressControl':false,
-            'panControlOptions': {'position': google.maps.ControlPosition.RIGHT_TOP},
-            'zoomControlOptions':{'position': google.maps.ControlPosition.RIGHT_TOP},            
+            'panControlOptions': {'position': google.maps.ControlPosition.LEFT_BOTTOM},
+            'zoomControlOptions':{'position': google.maps.ControlPosition.LEFT_BOTTOM},            
         });
         
         this.sVMarkers = {
@@ -94,7 +94,7 @@ var Core = new Class({
         zoomToBounds( bc2010[this.roi].borders);
         this.poi = window.map.getCenter();
         window.map.setOptions({'streetViewControl': true, 
-        'streetViewControlOptions': {'position': google.maps.ControlPosition.RIGHT_TOP}
+        'streetViewControlOptions': {'position': google.maps.ControlPosition.LEFT_BOTTOM}
         });
         
         this.updateFeed();
@@ -110,7 +110,7 @@ var Core = new Class({
         zoomToBounds( sd2010[this.roi].borders );
         this.poi = window.map.getCenter();
         window.map.setOptions({'streetViewControl': true, 
-        'streetViewControlOptions': {'position': google.maps.ControlPosition.RIGHT_TOP}
+        'streetViewControlOptions': {'position': google.maps.ControlPosition.LEFT_BOTTOM}
         });
         
         this.updateFeed();
@@ -126,7 +126,7 @@ var Core = new Class({
         this.poi = LOCATION_DE_DAM;
         this.roi = 'Amsterdam';
         window.map.setOptions({'streetViewControl': true, 
-        'streetViewControlOptions': {'position': google.maps.ControlPosition.RIGHT_TOP}
+        'streetViewControlOptions': {'position': google.maps.ControlPosition.LEFT_BOTTOM}
         });
                 
         this.resetMarkers();   
