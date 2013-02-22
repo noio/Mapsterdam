@@ -1,0 +1,57 @@
+Variable - keywords link
+
+* Crime rates: (Criminaliteit)
+['crimin', 'aangehouden', 'aanhouden', '“in hechtenis”', 'politie', 'politieagenten', 'politieagent', 'politieauto', 'politieman', 'politievrouw', 'politiemannen', 'politie-eenheid', 'motorpolitie', 'autoriteiten', 'misbruik', 'misbruik', 'misdaad', 'fraude', 'frauderen', 'misbruikt', '“Openbaar Ministerie”', 'OM', 'gearresteerd', 'arresteren', 'arrestatie', 'motoragent', 'agent', 'arrestatie', 'hoerenbuurt', 'hoeren', 'prostitutie', 'vermoorde', 'vermoord', 'slachtoffers', 'slachtoffer', 'verdenking', 'aangifte', 'misdrij', 'gevangenis', 'drugshandela', 'moordenaar', '“drugs handelen”', 'gewapende', 'brand', 'wapens', 'vermis', 'ongeluk', 'ongeval', 'gewonden', 'schietpartij']
+
+
+- Bicycle Theft (Fietsendiefstal)
+
+diefstal', 'fiets', 'fietsen*
+
+- Burglary ( Zakkenrollerij en Straatroof)
+gestolen', 'stelen', 'zakkenrollerij', 'zakkenrollen', 'beroofd', 'geroofd', 'straatroof', 'winkelen', 'shoplifting', 'straatrovers', 'portemonnee', 'overvalle*
+
+- House (Inbraak)
+inbraak', 'inbraken', 'winkeldiefstal', 'huis*', 'huizen', 'woning*', 'appartement*', 'flat*', 'rochdale
+
+
+- Violence (Straatgeweld)
+geweld*', klappen', 'vechten', 'gevecht', 'bloed', '“door het lint”', 'relschopper*', 'rellen', 'rel', 'onrust*', 'hooligan*', 'straatgeweld
+
+
+* Population (Bevolking)
+bevolking', 'bevolkings*', 'samenleving', 'bewoners', 'inwoners', 'inwoners*', 'bezoekers', 'allochto*', 'autotochto*', 'discriminatie', 'discriminer*', 'gediscrimineerd*
+
+- Population density (Bevolkingsdichtheid)
+inwoners', 'inwoners*', 'Amsterdammers
+
+- Maroccans (Marrokanen)
+marroka*
+marokko
+
+- Surinamese (Surinamers)
+surina*
+
+- Moluccan (Molukkers)
+Moluk*
+
+- Turks (Turken)
+Turk*
+
+- Dutch (Nederlanders)
+Nederlander', 'Nederlanders', '“Nederlandse bevolking”', 'autotochto*
+
+- Level of Education (Onderwijsniveau)
+MBO', 'HAVO', 'HvA', 'UvA', 'WO', 'VWO', 'HBO', 'universiteit', '“vrije universiteit”', 'studie', 'studeren*', 'student*', 'scholier*', 'afstudeer*', 'accreditatie', 'onderwijsinspectie', 'opleiding*', 'school', '“middelbare school”', 'academi*
+
+- Income (Inkomen)
+Inkomen', 'Inkomens*', 'Salaris', 'beloning', 'premie', 'rijk', 'welgesteld*', 'loon*', 'verdienste', 'rente', 'aandeelhouders', 'ondernemers', 'bonus*', 'FNV'
+
+
+- Jobless (Werkeloosheid)
+Werkloosheid*', 'Werkloos', 'werklozen', 'Arbeidsongeschikt*', 'WAO', 'CAO', 'Werk*', 'Arbeidsbureau', 'Randstad', 'Uitzend*', 'uitkering*', '“sociale voorziening”', '“sociale voorzieningen”', 'failliet', 'faillisement*', 'rente*', 'loon*', 'vakbond*', 'FNV', 'beroep', 'beroepen
+
+
+* Housing- Price per m2 (Woningprijs)
+
+Huizenmarkt', 'Koopwoning', 'Huurwoning', 'Woning*', 'woningbouwcorporaties', 'economie', 'huizen', 'huis*', 'rochdale', 'huurder*', 'grondprijs', '“de key”
